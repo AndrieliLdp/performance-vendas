@@ -2495,10 +2495,12 @@ const QUALIDADE_LEADS_DATA = [
     int_: 13, int_pct: 16.46,
     reu: 2, reu_pct: 2.53,
     desc: 36, desc_pct: 31.30,
-    grupos: [],
+    grupos: [
+      { nome: "Online", total: 68, qualificados: 24, qualificados_pct: 35.29, desqualificados: 44, desqualificados_pct: 64.71, semPreenchimento: 4, semPreenchimento_pct: 5.88 }
+    ],
     online: { total: 110, novoLead: 7, inv: 54, int_: 11, reu: 2, vendas: 0, desc: 36 },
     helena: { total: 5, novoLead: 1, inv: 2, int_: 2, reu: 0, vendas: 0, desc: 0 },
-    obs: "Adicionado 16/11/2026 ~16h25Z (scheduled qualidade-leads-semanal; dados semana mod 12:54Z, aba 'Semana 46' periodo 09/11 a 15/11). Entrada TOTAL 115/8/56/13/0/2/0/0/36 (pcts /79); Online 110/7/54/11/2/36, Helena 5/1/2/2/0/0. Funil e Custo OMITIDOS (grupos vazio): blocos na fonte (Online 155/36/117 SP 2, Inv R$23.218,01, qtds 36/36/16, custo por lead 223) sao copia exata da S45 -- lancar quando a fonte atualizar."
+    obs: "Adicionado 16/11/2026 ~16h25Z (scheduled qualidade-leads-semanal; dados semana mod 12:54Z, aba 'Semana 46' periodo 09/11 a 15/11). Entrada TOTAL 115/8/56/13/0/2/0/0/36 (pcts /79); Online 110/7/54/11/2/36, Helena 5/1/2/2/0/0. Funil e Custo OMITIDOS (grupos vazio): blocos na fonte (Online 155/36/117 SP 2, Inv R$23.218,01, qtds 36/36/16, custo por lead 223) sao copia exata da S45 -- lancar quando a fonte atualizar. 16/11 ~17h05Z (scheduled dashboard-auto-update; dados semana mod 16:37Z): Funil Online LANCADO 68/24(35.29%)/44(64.71%) SemPreench 4 (5.88%); Helena funil vazio -- omitida. Custo segue OMITIDO: Investimento vazio na fonte (qtds 24/14/7, custo por lead 111). Entrada sem drift."
   }
 ];
 
