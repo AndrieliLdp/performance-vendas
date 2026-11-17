@@ -1046,6 +1046,12 @@ td.n { text-align:right; font-weight:600; }
   </div>
 
   <div class="cc" style="margin-bottom:18px;">
+    <div class="cc-title">📈 Evolução da Entrada de Leads × Qualificados — Online</div>
+    <div class="cw" style="height:340px;"><canvas id="ql2-chart-entradaqual"></canvas></div>
+    <div style="font-size:10px;color:var(--text2);margin-top:6px;">Da Semana 29 em diante (não usa o filtro de período acima). Entrada = total de leads Online da semana. Qualificados = bloco "Funil qualificação" do grupo Online (na Semana 30, grupo Mídia). A Semana 29 vem da planilha semanal de qualificação, porque esta aba só tem dados a partir da Semana 30. Passe o mouse para ver o % de qualificação (qualificados ÷ classificados).</div>
+  </div>
+
+  <div class="cc" style="margin-bottom:18px;">
     <div class="cc-title">📈 Evolução de Leads Qualificados × Desqualificados — por Semana</div>
     <div class="cw" style="height:380px;"><canvas id="ql2-chart-qualevo"></canvas></div>
     <div style="font-size:10px;color:var(--text2);margin-top:6px;">Da Semana 30 em diante (Semana 36 desconsiderada). Segue o filtro de canal (Online/Helena) acima, não o filtro de período. Passe o mouse para ver o % de qualificados.</div>
@@ -2491,16 +2497,16 @@ const QUALIDADE_LEADS_DATA = [
     periodo: "09/11/2026 – 15/11/2026",
     total: 115,
     novoLead: 1,
-    inv: 44, inv_pct: 67.69,
+    inv: 41, inv_pct: 63.08,
     int_: 18, int_pct: 27.69,
     reu: 2, reu_pct: 3.08,
     desc: 50, desc_pct: 43.48,
     grupos: [
       { nome: "Online", total: 68, qualificados: 24, qualificados_pct: 35.29, desqualificados: 44, desqualificados_pct: 64.71, semPreenchimento: 4, semPreenchimento_pct: 5.88, custoQualQtd: 24, custoQualInv: 13176.41, custoIntQtd: 14, custoIntInv: 13176.41, custoQualIntQtd: 7 }
     ],
-    online: { total: 110, novoLead: 0, inv: 42, int_: 16, reu: 2, vendas: 0, desc: 50 },
+    online: { total: 110, novoLead: 0, inv: 39, int_: 16, reu: 2, vendas: 0, desc: 50 },
     helena: { total: 5, novoLead: 1, inv: 2, int_: 2, reu: 0, vendas: 0, desc: 0 },
-    obs: "Adicionado 16/11/2026 ~16h25Z (scheduled qualidade-leads-semanal; dados semana mod 12:54Z, aba 'Semana 46' periodo 09/11 a 15/11). Entrada TOTAL 115/8/56/13/0/2/0/0/36 (pcts /79); Online 110/7/54/11/2/36, Helena 5/1/2/2/0/0. Funil e Custo OMITIDOS (grupos vazio): blocos na fonte (Online 155/36/117 SP 2, Inv R$23.218,01, qtds 36/36/16, custo por lead 223) sao copia exata da S45 -- lancar quando a fonte atualizar. 16/11 ~17h05Z (scheduled dashboard-auto-update; dados semana mod 16:37Z): Funil Online LANCADO 68/24(35.29%)/44(64.71%) SemPreench 4 (5.88%); Helena funil vazio -- omitida. Custo segue OMITIDO: Investimento vazio na fonte (qtds 24/14/7, custo por lead 111). Entrada sem drift. 16/11 ~23h55Z (scheduled; dados semana mod 18:28Z): Custo LANCADO -- Investimento R$13.176,41, qtds qual 24 (R$549,02) / int 14 / qual+int 7 (R$1.882,34); custo por lead 111 (R$118,71). Celula de custo Interessado na fonte esta #DIV/0! (dashboard calcula 13176.41/14). Entrada e funil sem drift. 17/11 ~13h (manual, pedido Andrieli; dados semana mod 12:51Z): DRIFT na ENTRADA -- TOTAL 115/1/44/18/0/2/0/0/50 (era 115/8/56/13/2/36; pcts /65: 67.69/27.69/3.08, desc 43.48); Online 110/0/42/16/2/50, Helena 5/1/2/2/0/0 sem mudanca. Funil Online 68/24/44 SP 4 e custo (Inv R$13.176,41; 24/14/7) sem drift."
+    obs: "Adicionado 16/11/2026 ~16h25Z (scheduled qualidade-leads-semanal; dados semana mod 12:54Z, aba 'Semana 46' periodo 09/11 a 15/11). Entrada TOTAL 115/8/56/13/0/2/0/0/36 (pcts /79); Online 110/7/54/11/2/36, Helena 5/1/2/2/0/0. Funil e Custo OMITIDOS (grupos vazio): blocos na fonte (Online 155/36/117 SP 2, Inv R$23.218,01, qtds 36/36/16, custo por lead 223) sao copia exata da S45 -- lancar quando a fonte atualizar. 16/11 ~17h05Z (scheduled dashboard-auto-update; dados semana mod 16:37Z): Funil Online LANCADO 68/24(35.29%)/44(64.71%) SemPreench 4 (5.88%); Helena funil vazio -- omitida. Custo segue OMITIDO: Investimento vazio na fonte (qtds 24/14/7, custo por lead 111). Entrada sem drift. 16/11 ~23h55Z (scheduled; dados semana mod 18:28Z): Custo LANCADO -- Investimento R$13.176,41, qtds qual 24 (R$549,02) / int 14 / qual+int 7 (R$1.882,34); custo por lead 111 (R$118,71). Celula de custo Interessado na fonte esta #DIV/0! (dashboard calcula 13176.41/14). Entrada e funil sem drift. 17/11 ~13h (manual, pedido Andrieli; dados semana mod 12:51Z): DRIFT na ENTRADA -- TOTAL 115/1/44/18/0/2/0/0/50 (era 115/8/56/13/2/36; pcts /65: 67.69/27.69/3.08, desc 43.48); Online 110/0/42/16/2/50, Helena 5/1/2/2/0/0 sem mudanca. Funil Online 68/24/44 SP 4 e custo (Inv R$13.176,41; 24/14/7) sem drift. 17/11 ~18h40Z (manual, pedido Andrieli; dados semana mod 18:34:36Z): DRIFT Investigacao -- TOTAL inv 44->41 (pct /65: 63.08), Online inv 42->39; demais campos iguais; S44/S45 sem drift."
   }
 ];
 
@@ -2736,6 +2742,7 @@ function buildQualidadeTab() {
   qlqBuildCustoChart();
   qlqBuildVolumeChart();
   qlqBuildFunil14Chart();
+  qlqBuildEntradaQualChart();
 }
 
 function qlqRender(list) {
@@ -3107,6 +3114,50 @@ function qlqBuildCustoChart() {
       scales: {
         x: { offset: true, ticks: { color: '#9ba3c9', font: { size: 12 }, padding: 8 }, grid: { color: 'rgba(255,255,255,0.04)' } },
         y: { ticks: { display: false }, grid: { color: 'rgba(255,255,255,0.05)' }, min: -custoMax * 0.22, max: custoMax * 1.22 }
+      }
+    }
+  });
+}
+
+// Evolução semanal Online: entrada de leads × qualificados, lado a lado. Da Semana 29 em diante (não usa o filtro de período).
+function qlqBuildEntradaQualChart() {
+  const canvas = document.getElementById('ql2-chart-entradaqual');
+  if (!canvas) return;
+  dk('qlqEntradaQual');
+  // Da Semana 29 em diante. A S29 não existe em QUALIDADE_LEADS_DATA (começa na S30): vem da planilha
+  // semanal de qualificação (QL_ONLINE), que é outra fonte.
+  const s29 = (typeof QL_ONLINE !== 'undefined') ? QL_ONLINE.find(function(x){ return x.semana === 'Sem 29'; }) : null;
+  const weeks = (s29 ? [{ semana: 29, online: { total: s29.total }, grupos: [{ nome: 'Online', qualificados: s29.qual, desqualificados: s29.desq }] }] : [])
+    .concat(QUALIDADE_LEADS_DATA.filter(function(w){ return w.semana >= 29; }))
+    .sort(function(a,b){ return a.semana - b.semana; });
+  const grp = function(w){ const g = w.grupos || []; return g.find(function(x){ return x.nome === 'Online'; }) || g.find(function(x){ return /m[ií]dia/i.test(x.nome); }) || null; };
+  const labels = weeks.map(function(w){ return 'Sem ' + w.semana; });
+  const entrada = weeks.map(function(w){ return (w.online && w.online.total != null) ? w.online.total : null; });
+  const qual = weeks.map(function(w){ const g = grp(w); return g ? g.qualificados : null; });
+  const pct = weeks.map(function(w){ const g = grp(w); return g && (g.qualificados + g.desqualificados) ? g.qualificados / (g.qualificados + g.desqualificados) * 100 : null; });
+  const fmtN = function(v){ return v == null ? '' : v.toLocaleString('pt-BR'); };
+  charts['qlqEntradaQual'] = new Chart(canvas.getContext('2d'), {
+    type: 'bar',
+    data: {
+      labels: labels,
+      datasets: [
+        { label: 'Entrada de leads', data: entrada, backgroundColor: '#7a9bc4', borderWidth: 0, borderRadius: 3, barPercentage: 0.85, categoryPercentage: 0.75,
+          datalabels: { display: true, anchor: 'end', align: 'top', color: '#7a9bc4', font: { size: 10, weight: '700' }, formatter: fmtN } },
+        { label: 'Qualificados', data: qual, backgroundColor: '#50c878', borderWidth: 0, borderRadius: 3, barPercentage: 0.85, categoryPercentage: 0.75,
+          datalabels: { display: true, anchor: 'end', align: 'top', color: '#50c878', font: { size: 10, weight: '700' }, formatter: fmtN } }
+      ]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      layout: { padding: { top: 22 } },
+      plugins: {
+        legend: { display: true, position: 'top', align: 'end', labels: { color: '#9ba3c9', font: { size: 11 }, boxWidth: 12, usePointStyle: true, pointStyle: 'rect' } },
+        tooltip: { mode: 'index', intersect: false, callbacks: { footer: function(items){ const p = pct[items[0].dataIndex]; return p == null ? '' : '% qualificação: ' + p.toLocaleString('pt-BR', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + '%'; } } },
+        datalabels: { display: true }
+      },
+      scales: {
+        x: { ticks: { color: '#9ba3c9', font: { size: 10 } }, grid: { display: false } },
+        y: { ticks: { color: '#9ba3c9', font: { size: 10 } }, grid: { color: 'rgba(255,255,255,0.05)' }, beginAtZero: true }
       }
     }
   });
